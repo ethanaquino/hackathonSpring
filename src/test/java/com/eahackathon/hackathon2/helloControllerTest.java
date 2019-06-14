@@ -24,9 +24,6 @@ public class helloControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Autowired
-    private ObjectMapper mapper;
-
     @Test
     public void should_haveHelloWorld() throws Exception {
         this.mockMvc.perform(get("/hello")).andDo(print()).andExpect(status().isOk())
